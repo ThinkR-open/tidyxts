@@ -1,0 +1,15 @@
+Package: tidyxts
+Title: tidy xts manipulation
+Version: 0.0.0.9000
+Authors@R: person("Vincent", "Guyader", email = "vincent@thinkr.fr", role = c("aut", "cre"))
+Description: tidy manipulation on xts object.
+Depends: R (>= 3.4.2)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    xts,
+    rlang (>= 0.1.2),
+    tidyselect,
+    magrittr
+RoxygenNote: 6.0.1
