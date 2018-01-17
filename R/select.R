@@ -1,3 +1,15 @@
+#' Title
+#'
+#' @param .data
+#' @param ...
+#'
+#' @export
+#'
+select <- function (.data, ...)
+{
+  UseMethod("select")
+}
+
 #' Select variables by name on xts
 #'
 #' @param .data
@@ -13,7 +25,7 @@
 #' sample.xts %>% select(Open,Close)
 #'
 select.xts <- function(.data, ...) {
-  vars <- dplyr:::select_vars(names(.data), !(!(!quos(...))))
-  dplyr:::select_impl(.data, vars)
+  vars <- tidyselect::vars_select(names(.data),...)
+  .data[,vars]
 }
 
