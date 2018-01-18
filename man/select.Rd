@@ -2,10 +2,41 @@
 % Please edit documentation in R/select.R
 \name{select}
 \alias{select}
-\title{Title}
+\alias{select.xts}
+\title{Select variables by name on xts}
 \usage{
 select(.data, ...)
+
+select.xts(.data, ...)
+}
+\arguments{
+\item{.data}{an xts object}
+
+\item{...}{One or more unquoted expressions separated by commas.
+  You can treat variable names like they are positions.
+
+  Positive values select variables; negative values to drop variables.
+  If the first expression is negative, `select()` will automatically
+  start with all variables.
+
+  Use named arguments to rename selected variables.
+
+  These arguments are automatically [quoted][rlang::quo] and
+  [evaluated][rlang::eval_tidy] in a context where column names
+  represent column positions. They support
+  [unquoting][rlang::quasiquotation] and splicing. See
+  `vignette("programming")` for an introduction to these concepts.}
+}
+\value{
+a xts
 }
 \description{
-Title
+Select variables by name on xts
+}
+\examples{
+library(xts)
+data(sample_matrix)
+sample.xts <- as.xts(sample_matrix, descr='my new xts object')
+sample.xts \%>\% select(Open,Close)
+
 }
