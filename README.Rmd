@@ -33,8 +33,8 @@ library(xts)
 library(tidyxts)
 data(sample_matrix)
 sample.xts <- as.xts(sample_matrix, descr='my new xts object')
-sample.xts %>% select(Open,Close)
-sample.xts %>% select(1,3)
+sample.xts %>% select(Open,Close) %>% head()
+sample.xts %>% select(1,3) %>% head()
 # sample.xts %>% slice(c(1,3))
 
 ```
