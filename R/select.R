@@ -17,8 +17,6 @@ select <- function (.data, ...)
 #'
 #' @return
 #' @export
-#' @import tidyselect
-#' @import dplyr
 #'
 #' @examples
 #' library(xts)

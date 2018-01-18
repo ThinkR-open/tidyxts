@@ -6,9 +6,6 @@
 \usage{
 select(.data, ...)
 }
-\arguments{
-\item{...}{}
-}
 \description{
 Title
 }
