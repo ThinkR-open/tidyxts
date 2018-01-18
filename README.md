@@ -20,12 +20,6 @@ Example
 
 ``` r
 library(xts)
-#> Loading required package: zoo
-#> 
-#> Attaching package: 'zoo'
-#> The following objects are masked from 'package:base':
-#> 
-#>     as.Date, as.Date.numeric
 library(tidyxts)
 data(sample_matrix)
 sample.xts <- as.xts(sample_matrix, descr='my new xts object')
@@ -45,5 +39,8 @@ sample.xts %>% select(1,3) %>% head()
 #> 2007-01-05 50.37347 50.22103
 #> 2007-01-06 50.24433 50.11121
 #> 2007-01-07 50.13211 49.99185
-# sample.xts %>% slice(c(1,3))
+sample.xts %>% slice(c(1,3)) %>% head()
+#>                Open     High      Low    Close
+#> 2007-01-02 50.03978 50.11778 49.95041 50.11778
+#> 2007-01-04 50.42096 50.42096 50.26414 50.33236
 ```
