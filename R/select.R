@@ -1,9 +1,8 @@
-#' @export
+#' @name select
 #' @rdname select
-select <- function (.data, ...)
-{
-  dplyr::select(.data,...)
-}
+#' @export
+#' @importFrom dplyr select
+NULL
 
 #' Select variables by name on xts
 #'
@@ -24,7 +23,8 @@ select <- function (.data, ...)
 #'   `vignette("programming")` for an introduction to these concepts.
 #'
 #' @return a xts
-#' @export
+#' @method select xts
+#' @S3method select xts
 #' @rdname select
 #' @examples
 #' library(xts)

@@ -5,9 +5,7 @@
 \alias{select.xts}
 \title{Select variables by name on xts}
 \usage{
-select(.data, ...)
-
-select.xts(.data, ...)
+\method{select}{xts}(.data, ...)
 }
 \arguments{
 \item{.data}{an xts object}

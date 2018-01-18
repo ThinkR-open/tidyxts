@@ -7,11 +7,12 @@ Depends: R (>= 3.4.2)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: 
+Imports:
     xts,
     rlang (>= 0.1.2),
     tidyselect,
-    magrittr
+    magrittr,
+    dplyr
 RoxygenNote: 6.0.1
-Suggests: 
+Suggests:
     testthat

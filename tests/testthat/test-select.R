@@ -11,6 +11,5 @@ test_that("select ok", {
   expect_is(sample.xts %>% select(c(1,2)),"xts")
   expect_equal(sample.xts %>% select(Open,Close) %>% names(),c("Open","Close"))
   expect_equal(sample.xts %>% select(1,2) %>% names(),c("Open","High"))
-  expect_equal_to_reference(sample.xts %>% select(Open,Close),"sel.test")
-  sample.xts %>% select(1,2) %>% names()
-})
+  expect_equal_to_reference(sample.xts %>% select(Open,Close),"select.test")
+T})
